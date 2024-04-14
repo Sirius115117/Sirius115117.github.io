@@ -1,0 +1,96 @@
+html, body{
+  overflow: hidden;
+  background: #000;
+  padding: 0px;
+  margin: 0px;
+}
+
+.profile{
+  z-index: 5;
+  position: absolute;
+  color: #fff;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  background: rgba(60,60,60,.6);
+  padding: 5px;
+}
+
+#profile-header {
+  text-align: center;
+  font-weight: bold;
+  color: aquamarine;
+}
+
+.profile p, ul {
+  text-align: justify;
+  color:lime;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.list-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#language-list-left,
+#language-list-center,
+#language-list-right {
+  flex: 1; 
+}
+
+@media screen and (max-width: 768px) {
+  .profile,
+  .links {
+    position: static;
+    background: none;
+    padding: 0; 
+    width: 100%;
+  }
+  
+  .profile p,
+  .profile ul {
+    padding: 0;
+  }
+
+  .list-container {
+    display: block;
+    text-align: center;
+  }
+}
+
+#canvas{
+  cursor: crosshair;
+  z-index: 2;
+  position: absolute;
+  top: 0; left: 0;
+}
+
+#overlay{
+  background: radial-gradient(ellipse at center, rgba(0,0,0,.0) 10%, rgba(0,0,0,.8) 80%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%);
+  z-index: 3;
+  position: absolute;
+  top:0;left:0;
+  height: 100%;
+  width: 100%;
+}
+
+#bg_glow{
+  z-index: 1;
+  position: absolute;
+  top:0;left:0;
+  height: 100%;
+  width: 100%;
+}
+
+#overlay:hover{
+  cursor: pointer;
+}
+
+#fps{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 5;
+}
